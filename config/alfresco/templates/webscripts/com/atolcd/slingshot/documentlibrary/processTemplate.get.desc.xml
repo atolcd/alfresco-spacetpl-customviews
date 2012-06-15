@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>processTemplate</shortname>
+  <description>Get node template</description>
+  <url>/slingshot/processTemplate?path={path}</url>
+  <format default="html"/>
+  <authentication>user</authentication>
+</webscript>

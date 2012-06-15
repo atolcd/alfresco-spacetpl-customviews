@@ -1,0 +1,45 @@
+.toolbar .onActionCreateSpace {
+  background-image: url(../images/space-16.png);
+}
+
+.spaceTemplate-container {
+  padding: 10px;
+}
+
+.spaceTemplate-container input {
+  width: 220px;
+}
+
+.spaceTemplate-container select {
+  width: 330px;
+}
+
+.spaceTemplate-container label {
+  float: left;
+  width:120px;
+  margin-right: 0.5em;
+  display: block
+}
+
+.toolbar .create-space span.first-child {
+  background: url("images/folder-new-16.png") no-repeat scroll 12px 4px transparent;
+  padding-left: 22px;
+}
+
+.toolbar .selected-items .yuimenuitemlabel span, .toolbar .create-space .yuimenuitemlabel span {
+  background-position: 2px 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  margin-left: -4px;
+  min-height: 16px;
+  padding: 2px 0 1px 24px;
+}
+
+.toolbar .create-space .onNewFolder {
+  background-image: url("images/create-space-new-folder-16.png");
+}
+
+.toolbar .create-space .onNewSpaceFromTemplate {
+  background-image: url("images/create-space-new-space-16.png");
+}

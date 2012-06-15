@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+    <!-- Webscripts -->
+    <bean id="webscript.com.atolcd.slingshot.documentlibrary.processTemplate.get" class="com.atolcd.web.scripts.ProcessTemplateGet" parent="webscript">
+       <property name="nodeService">
+          <ref bean="NodeService" />
+       </property>
+       <property name="templateService">
+          <ref bean="TemplateService" />
+       </property>
+       <property name="searchService">
+         <ref bean="SearchService" />
+       </property>
+       <property name="personService">
+         <ref bean="PersonService" />
+       </property>
+       <property name="authenticationService">
+         <ref bean="AuthenticationService" />
+       </property>
+       <property name="namespaceService">
+         <ref bean="NamespaceService" />
+       </property>
+       <property name="serviceRegistry">
+         <ref bean="ServiceRegistry"></ref>
+       </property>
+       <property name="sysAdminParams">
+         <ref bean="sysAdminParams"></ref>
+       </property>
+    </bean>
+
+</beans>

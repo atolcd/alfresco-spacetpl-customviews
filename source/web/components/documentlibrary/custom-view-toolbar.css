@@ -1,0 +1,52 @@
+.toolbar .custom-view {
+  float: left;
+}
+
+.toolbar .custom-view span.first-child {
+  background: url("images/custom-view-preview-16.gif") no-repeat scroll 12px 4px transparent;
+  padding-left: 22px;
+}
+
+.toolbar .selected-items .yuimenuitemlabel span, .toolbar .custom-view .yuimenuitemlabel span {
+  background-position: 2px 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: block;
+  margin-left: -4px;
+  min-height: 16px;
+  padding: 2px 0 1px 24px;
+}
+
+.toolbar .custom-view .onCustomView {
+  background-image: url("images/custom-view-configure-16.png");
+}
+
+.toolbar .custom-view .onHideCustomView {
+  background-image: url("images/custom-view-showhide-16.png");
+}
+
+.custom-view-menu{
+  float: left;
+}
+
+.custom-view-item-disabled{
+  color: #A6A6A6;
+  cursor: default;
+}
+
+
+/***** Dialog *****/
+.viewTemplate-container {
+  padding: 10px;
+}
+
+.viewTemplate-container select {
+  width: 330px;
+}
+
+.viewTemplate-container label {
+  float: left;
+  width:120px;
+  margin-right: 0.5em;
+  display: block
+}

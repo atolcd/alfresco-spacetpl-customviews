@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>createSpaceFromTemplate</shortname>
+  <description>Create space for template</description>
+  <url>/slingshot/createSpaceFromTemplate</url>
+  <format default="json"/>
+  <authentication>user</authentication>
+</webscript>

@@ -1,0 +1,13 @@
+.customView {
+  border-bottom: 1px solid #C7CCCE;
+  margin: 0 -10px;
+  padding: 10px;
+}
+
+.customViewContent{
+  padding: 10px;
+}
+
+.customView-hidden{
+  display: none;
+}

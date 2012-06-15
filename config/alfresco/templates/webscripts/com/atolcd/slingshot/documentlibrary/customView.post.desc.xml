@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>customView</shortname>
+  <description>Custom view</description>
+  <url>/slingshot/customView</url>
+  <format default="json"/>
+  <authentication>user</authentication>
+</webscript>

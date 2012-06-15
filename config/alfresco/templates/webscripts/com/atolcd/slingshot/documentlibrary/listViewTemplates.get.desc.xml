@@ -1,0 +1,7 @@
+<webscript>
+  <shortname>listViewTemplates</shortname>
+  <description>List spaces templates</description>
+  <url>/slingshot/listViewTemplates</url>
+  <format default="json"/>
+  <authentication>user</authentication>
+</webscript>

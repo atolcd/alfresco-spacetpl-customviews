@@ -1,0 +1,37 @@
+<alfresco-config>
+
+   <!-- Space templates configuration options -->
+   <config evaluator="string-compare" condition="SpaceTemplates">
+     <!--
+          The 'space-templates' config element value can be one of:
+          both        - space templates are availabled in the repository and in sites
+          repository  - space templates are only availabled in the repository
+          sites       - space templates are only availabled in sites
+          none        - space templates are not availabled
+     -->
+     <display-mode>
+        <value>both</value>
+     </display-mode>
+   </config>
+
+   <!-- Custom views configuration options -->
+   <config evaluator="string-compare" condition="CustomViews">
+     <!--
+          The 'custom-views' config element value can be one of:
+          both        - custom views are availabled in the repository and in sites
+          repository  - custom views are only availabled in the repository
+          sites       - custom views are only availabled in sites
+          none        - custom views are not availabled
+     -->
+     <display-mode>
+        <value>both</value>
+     </display-mode>
+
+     <!-- CSS attributes -->
+     <style>
+        <attribute id="max-height">20em</attribute>
+        <attribute id="overflow-y">auto</attribute>
+     </style>
+   </config>
+
+</alfresco-config>
