@@ -30,6 +30,7 @@
          <div class="yui-b" id="alf-filters">
             <@region id="filter" scope="template"/>
             <@region id="tree" scope="template"/>
+            <@region id="categories" scope="template" />
             <@region id="tags" scope="template"/>
          </div>
       </div>
