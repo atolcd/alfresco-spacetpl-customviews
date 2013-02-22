@@ -17,6 +17,7 @@
           <!-- Default config -->
           <value>classpath:alfresco/space.templates.custom.views-config.xml</value>
 
+          <!-- Custom config -->
           <value>classpath:alfresco/web-extension/space.templates.custom.views-config-custom.xml</value>
           <value>jar:*!/META-INF/space.templates.custom.views-config-custom.xml</value>
         </list>

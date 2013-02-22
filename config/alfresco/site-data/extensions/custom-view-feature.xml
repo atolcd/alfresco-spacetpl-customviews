@@ -1,0 +1,36 @@
+<extension>
+  <modules>
+    <module>
+      <id>Custom Views - Space templates features</id>
+      <auto-deploy>true</auto-deploy>
+      <components>
+        <component>
+          <scope>template</scope>
+          <region-id>toolbar</region-id>
+          <source-id>repository</source-id>
+          <sub-components>
+            <sub-component id="customview">
+              <url>/components/documentlibrary/custom-view</url>
+            </sub-component>
+          </sub-components>
+        </component>
+        <component>
+          <scope>template</scope>
+          <region-id>toolbar</region-id>
+          <source-id>documentlibrary</source-id>
+          <sub-components>
+            <sub-component id="customview">
+              <url>/components/documentlibrary/custom-view</url>
+            </sub-component>
+          </sub-components>
+        </component>
+      </components>
+      <customizations>
+        <customization>
+          <targetPackageRoot>org.alfresco.components.documentlibrary</targetPackageRoot>
+          <sourcePackageRoot>com.atolcd.components.documentlibrary.toolbar</sourcePackageRoot>
+        </customization>
+      </customizations>
+    </module>
+  </modules>
+</extension>

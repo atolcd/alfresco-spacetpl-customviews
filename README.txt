@@ -1,28 +1,4 @@
 ###################################################
-############ Files/functions overrided ############
-###################################################
-
-  # Template instances
-  /site-data/template-instances/documentlibrary.xml
-  /site-data/template-instances/repository.xml
-
-  # Templates
-  /templates/org/alfresco/documentlibrary.ftl
-  /templates/org/alfresco/repository.ftl
-
-  # Webscripts
-  /site-webscripts/org/alfresco/components/documentlibrary/repo-toolbar.get.html.ftl
-  /site-webscripts/org/alfresco/components/documentlibrary/toolbar.get.head.ftl
-  /site-webscripts/org/alfresco/components/documentlibrary/toolbar.get.html.ftl
-
-
-  # JavaScript functions
-  Alfresco.DocListToolbar.prototype.onComponentsLoaded
-  Alfresco.DocListToolbar.prototype.onDoclistMetadata
-
-
-
-###################################################
 ####### How override default configuration? #######
 ###################################################
 
@@ -65,3 +41,10 @@ Example:
    </config>
 
 </alfresco-config>
+
+
+###################################################
+################ Module Deployment ################
+###################################################
+
+  http://server:port/share/page/modules/deploy

@@ -1,5 +1,5 @@
 <webscript>
-  <shortname>DocLib CustomView</shortname>
+  <shortname>DocLib Custom View display</shortname>
   <description>Document Library: custom view</description>
   <url>/components/documentlibrary/custom-view</url>
 </webscript>
