@@ -66,37 +66,38 @@ if (typeof Atol == undefined || !Atol) { var Atol = {}; }
         div.innerHTML = spaceTemplatesAction;
 
         // Insert custom action element into the DOM
-        var left = Selector.query('div .left', this.id + '-body', true);
-        var createFolderElt = Selector.query('div .new-folder', this.id + '-body', true);
+        var left = Selector.query('div .left', this.id + '-tb-body', true);
+        var createFolderElt = Selector.query('div .new-folder', this.id + '-tb-body', true);
 
-        var createFolderActionDiv = (createFolderElt.parentNode) ? createFolderElt.parentNode : null;
-        if (createFolderActionDiv) {
-          Dom.setStyle(createFolderActionDiv, "display", "none");
-          left.insertBefore(div, createFolderActionDiv);
+        if (createFolderElt) {
+          var createFolderActionDiv = (createFolderElt.parentNode) ? createFolderElt.parentNode : null;
+          if (createFolderActionDiv) {
+            Dom.setStyle(createFolderActionDiv, "display", "none");
+            left.insertBefore(div, createFolderActionDiv);
+          }
+          else {
+            var separator = document.createElement('div');
+            separator.setAttribute("class", "separator");
+            separator.innerHTML = '&nbsp;';
+
+            left.appendChild(separator);
+            left.appendChild(div);
+          }
+
+
+          // New Space Templates menu button
+          this.widgets.createSpace = Alfresco.util.createYUIButton(this, "createSpace-button", this.onCreateSpace,
+          {
+            type: "menu",
+            menu: "createSpace-menu",
+            lazyloadmenu: false,
+            disabled: true,
+            value: "CreateChildren"
+          });
+
+          this.dynamicControls.push(this.widgets.createSpace);
         }
-        else {
-          var separator = document.createElement('div');
-          separator.setAttribute("class", "separator");
-          separator.innerHTML = '&nbsp;';
-
-          left.appendChild(separator);
-          left.appendChild(div);
-        }
-
-
-        // New Space Templates menu button
-        this.widgets.createSpace = Alfresco.util.createYUIButton(this, "createSpace-button", this.onCreateSpace,
-        {
-          type: "menu",
-          menu: "createSpace-menu",
-          lazyloadmenu: false,
-          disabled: true,
-          value: "CreateChildren"
-        });
-
-        this.dynamicControls.push(this.widgets.createSpace);
       }
-
 
       if (
         this.options.customViewDisplayMode != 'none' && (
@@ -105,6 +106,15 @@ if (typeof Atol == undefined || !Atol) { var Atol = {}; }
           (this.options.customViewDisplayMode == 'sites' && this.options.siteId)
         )
       ) {
+          // Move "customView" region between toolbar element ('tb-body') and document-list element ('dl-body')
+          var elt = Dom.get(this.id + '-customView');
+          if (elt && elt.parentNode) {
+            var documentListBodyElt = Dom.get(this.id + '-dl-body');
+            if (documentListBodyElt && documentListBodyElt.parentNode) {
+              documentListBodyElt.parentNode.insertBefore(elt.parentNode, documentListBodyElt);
+            }
+          }
+
           var customViewAction = '<div class="custom-view">' +
              '<button id="' + this.id + '-customView-button" name="customView" title="' + this.msg("button.view.custom") + '">&nbsp;</button>' +
              '<div id="' + this.id + '-customView-menu" class="yuimenu">' +
@@ -115,8 +125,7 @@ if (typeof Atol == undefined || !Atol) { var Atol = {}; }
                    '</ul>' +
                 '</div>' +
              '</div>' +
-          '</div>' +
-          '<div class="separator">&nbsp;</div>';
+          '</div>';
 
         // Create custom action element
         var div = document.createElement('div');
@@ -124,7 +133,7 @@ if (typeof Atol == undefined || !Atol) { var Atol = {}; }
         div.innerHTML = customViewAction;
 
         // Insert custom action element into the DOM
-        var right = Selector.query('div .right', this.id + '-body', true);
+        var right = Selector.query('div .right', this.id + '-tb-body', true);
         var firstChildElt = (right.childNodes.length > 0) ? right.childNodes[0] : null;
         if (firstChildElt) {
           right.insertBefore(div, firstChildElt);

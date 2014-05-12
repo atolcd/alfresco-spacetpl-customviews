@@ -2,6 +2,7 @@
 ================================
 
 This extension allows you to add custom views and/or space templates mechanisms in the document library of sites and/or in the Repository View.  
+Note: **on latest Alfresco versions (4.2.d and more) space templates is now a native feature**   
 
 Building the module
 -------------------
@@ -64,7 +65,7 @@ Go to the document library of a site or in the repository (from Share):
                   none        - space templates are not availabled
              -->
              <display-mode>
-                <value>both</value>
+                <value>none</value>
              </display-mode>
            </config>
 

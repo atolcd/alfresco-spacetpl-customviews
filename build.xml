@@ -24,8 +24,6 @@
 
   <property name="build.compile.dir" value="${build.dir}/classes" />
   <property name="java.src.dir" value="${basedir}/source/java" />
-  <property name="javac.debug" value="off" />
-
 
   <path id="yuicompressor.classpath">
     <fileset dir="lib">
@@ -71,7 +69,7 @@
 
   <available file="${java.src.dir}" type="dir" property="lib.java.src.exists" />
   <target name="compile" description="Compile Java source code" if="lib.java.src.exists">
-    <javac srcdir="${java.src.dir}" destdir="${build.compile.dir}" debug="${javac.debug}">
+    <javac srcdir="${java.src.dir}" destdir="${build.compile.dir}" debug="${javac.debug}" source="${version.source}" target="${version.classe}" encoding="${compile.encoding}">
       <classpath>
         <path refid="compile.classpath" />
       </classpath>

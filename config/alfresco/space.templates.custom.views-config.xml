@@ -10,7 +10,7 @@
           none        - space templates are not availabled
      -->
      <display-mode>
-        <value>both</value>
+        <value>none</value>
      </display-mode>
    </config>
 

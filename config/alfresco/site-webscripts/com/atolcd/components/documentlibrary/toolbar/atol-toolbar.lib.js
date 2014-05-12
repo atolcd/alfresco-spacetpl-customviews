@@ -13,7 +13,7 @@ function getConfigValue(scoped, prop) {
   return value;
 }
 
-function setAtolToolbarOptions(widgetId, newWidgetName) {
+function setAtolToolbarOptions(widgetName, newWidgetName) {
   var doclistPrefs = eval('try{(prefs.' + PREFERENCES_ROOT + ')}catch(e){}');
   if (typeof doclistPrefs != "object") {
     doclistPrefs = {};
@@ -35,7 +35,7 @@ function setAtolToolbarOptions(widgetId, newWidgetName) {
   }
 
   for (var i=0; i<model.widgets.length; i++) {
-    if (model.widgets[i].id == widgetId) {
+    if (model.widgets[i].name == widgetName) {
       model.widgets[i].name = newWidgetName;
       model.widgets[i].options.hideCustomView = Boolean(doclistPrefs.hideCustomView);
       model.widgets[i].options.customViewDisplayMode = getConfigValue("CustomViews", "display-mode");
